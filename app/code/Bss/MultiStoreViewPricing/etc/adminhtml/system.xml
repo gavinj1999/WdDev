@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!--
+/**
+* BSS Commerce Co.
+*
+* NOTICE OF LICENSE
+*
+* This source file is subject to the EULA
+* that is bundled with this package in the file LICENSE.txt.
+* It is also available through the world-wide-web at this URL:
+* http://bsscommerce.com/Bss-Commerce-License.txt
+*
+* =================================================================
+*                 MAGENTO EDITION USAGE NOTICE
+* =================================================================
+* This package designed for Magento COMMUNITY edition
+* BSS Commerce does not guarantee correct work of this extension
+* on any other Magento edition except Magento COMMUNITY edition.
+* BSS Commerce does not provide extension support in case of
+* incorrect edition usage.
+* =================================================================
+*
+* @category   BSS
+* @package    Bss_MultiStoreViewPricing
+* @author     Extension Team
+* @copyright  Copyright (c) 2016-2017 BSS Commerce Co. ( http://bsscommerce.com )
+* @license    http://bsscommerce.com/Bss-Commerce-License.txt
+*/
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="currency">
+            <group id="options" translate="label" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="base" translate="label comment" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

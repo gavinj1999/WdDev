@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!--
+/**
+* BSS Commerce Co.
+*
+* NOTICE OF LICENSE
+*
+* This source file is subject to the EULA
+* that is bundled with this package in the file LICENSE.txt.
+* It is also available through the world-wide-web at this URL:
+* http://bsscommerce.com/Bss-Commerce-License.txt
+*
+* =================================================================
+*                 MAGENTO EDITION USAGE NOTICE
+* =================================================================
+* This package designed for Magento COMMUNITY edition
+* BSS Commerce does not guarantee correct work of this extension
+* on any other Magento edition except Magento COMMUNITY edition.
+* BSS Commerce does not provide extension support in case of
+* incorrect edition usage.
+* =================================================================
+*
+* @category   BSS
+* @package    Bss_MultiStoreViewPricing
+* @author     Extension Team
+* @copyright  Copyright (c) 2016-2017 BSS Commerce Co. ( http://bsscommerce.com )
+* @license    http://bsscommerce.com/Bss-Commerce-License.txt
+*/
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	<type name="Magento\CatalogSearch\Model\Adapter\Mysql\Aggregation\DataProvider">
+		<plugin name="Bss_MultiStoreViewPricing::Filter_Price_DataProvider" type="Bss\MultiStoreViewPricing\Plugin\Filter\Price\DataProvider"/>
+	</type>
+
+	<type name="Magento\CatalogSearch\Model\Search\TableMapper">
+		<plugin name="Bss_MultiStoreViewPricing::Search_TableMapper" type="Bss\MultiStoreViewPricing\Plugin\CatalogSearch\TableMapper"/>
+	</type>
+
+	<preference for="Magento\Checkout\Model\Session" type="Bss\MultiStoreViewPricing\Model\Checkout\Session" />
+
+	<preference for="Magento\Quote\Model\ResourceModel\Quote\Item\Collection" type="Bss\MultiStoreViewPricing\Model\Quote\Item\Collection" />
+
+	<type name="Magento\Store\Controller\Store\SwitchAction">
+		<plugin name="Bss_MultiStoreViewPricing::SwitchAction" type="Bss\MultiStoreViewPricing\Plugin\Store\SwitchStore" sortOrder="1" />
+	</type>
+</config>

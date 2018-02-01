@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+     <modules>
+        <Medma_Copyoptions>
+            <active>true</active>
+            <codePool>community</codePool>            
+        </Medma_Copyoptions>
+    </modules>
+</config>
